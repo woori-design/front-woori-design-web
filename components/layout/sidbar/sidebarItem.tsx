@@ -30,7 +30,7 @@ export default function SidebarItem({ item, expandedItems, toggleExpand }: Sideb
           }
         }}
         className={`flex items-center justify-between w-full py-3 text-sm cursor-pointer ${
-          isActive ? 'text-blue-600 font-semibold' : 'text-gray-700' // ✅ 부모는 항상 기본 색 유지
+          isActive ? 'text-blue-600 font-semibold' : 'text-gray-700'
         }`}
       >
         <span className="ml-2">{item.title}</span>
