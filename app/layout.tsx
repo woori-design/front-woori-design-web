@@ -7,12 +7,11 @@ import Sidebar from '@/components/layout/sidbar/sidebar';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-
   const hideSidebar = pathname === '/login';
 
   return (
     <html lang="en">
-      <body className="flex min-h-screen w-full flex-col">
+      <body className="flex min-h-screen w-full flex-col font-pretendard">
         <Header />
         <div className="flex flex-1">
           {!hideSidebar && <Sidebar />}

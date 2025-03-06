@@ -50,7 +50,7 @@ const SearchBar = () => {
         onClick={handleSearchSubmit}
         className="absolute right-[10px] top-[50%] translate-y-[-50%] cursor-pointer"
       >
-        <Image src="/Searching.svg" alt="Search Icon" width={16} height={16} />
+        <Image src="/imgs/Searching.svg" alt="Search Icon" width={16} height={16} />
       </button>
     </div>
   );

@@ -22,11 +22,12 @@ const Header = () => {
     <header className="flex justify-between items-center px-6 py-4 border-b border-gray-200">
       <Link href="/" className="flex items-center cursor-pointer">
         <Image
-          src="/Logo.svg"
+          src="/imgs/Logo.svg"
           alt="WOORI Design Logo"
           width={80}
           height={20}
           className="h-5 w-auto"
+          priority
         />
       </Link>
       <nav className="flex gap-3">
