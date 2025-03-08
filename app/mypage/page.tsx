@@ -1,12 +1,15 @@
 'use client';
 
-import { CustomInput } from '@/components/ui/textInput';
 import { useState } from 'react';
+
+import { Modal } from '@/components/ui/modal';
+import { CustomInput } from '@/components/ui/textInput';
 
 export default function AccountManagement() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [apiKey, setApiKey] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleReissueApiKey = () => {
     setApiKey(`new-api-key-${Date.now()}`);
@@ -14,9 +17,12 @@ export default function AccountManagement() {
   };
 
   const handleWithdraw = () => {
-    if (confirm('정말 탈퇴하시겠습니까?')) {
-      alert('탈퇴되었습니다.');
-    }
+    setIsModalOpen(true);
+  };
+
+  const handleConfirmWithdraw = () => {
+    alert('탈퇴되었습니다.');
+    setIsModalOpen(false);
   };
 
   return (
@@ -68,6 +74,11 @@ export default function AccountManagement() {
           </button>
         </div>
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onConfirm={handleConfirmWithdraw}
+      />
     </main>
   );
 }

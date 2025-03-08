@@ -1,7 +1,7 @@
 'use client';
 
-import { type InputHTMLAttributes, forwardRef, type ReactNode } from 'react';
 import Image from 'next/image';
+import { type InputHTMLAttributes, forwardRef, type ReactNode } from 'react';
 
 export interface CustomInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: ReactNode;
@@ -48,7 +48,7 @@ const CustomInput = forwardRef<HTMLInputElement, CustomInputProps>(
                 >
                   <div className="relative w-5 h-5">
                     <Image
-                      src="/Copy.svg"
+                      src="imgs/Copy.svg"
                       alt="copy"
                       width={20}
                       height={20}
