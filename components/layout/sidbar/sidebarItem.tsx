@@ -26,7 +26,6 @@ export default function SidebarItem({ item, expandedItems, toggleExpand }: Sideb
           if (hasChildren) {
             e.preventDefault();
             toggleExpand(item.href);
-            console.log('메뉴 클릭');
           }
         }}
         className={`flex items-center justify-between w-full py-3 text-sm cursor-pointer ${
