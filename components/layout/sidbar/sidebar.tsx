@@ -2,15 +2,18 @@
 
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { navItems } from '@/data/navItems';
+import { navItems, mypageNavItems } from '@/data/navItems';
 import SidebarItem from './sidebarItem';
 import SearchBar from '@/components/ui/searchBar';
 
 export default function Sidebar() {
   const pathname = usePathname();
 
+  const isMypage = pathname.startsWith('/mypage');
+  const items = isMypage ? mypageNavItems : navItems;
+
   const getInitialExpandedItems = () => {
-    return navItems
+    return items
       .filter(
         (item) =>
           pathname.startsWith(item.href) ||
@@ -28,13 +31,15 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="w-60 border-r border-gray-200 bg-white h-screen overflow-auto">
-      <div className="p-4 relative">
-        <SearchBar />
-      </div>
+    <aside className="w-60 border-r border-gray-200 bg-white h-screen overflow-auto mt-2">
+      {!isMypage && (
+        <div className="p-4 relative">
+          <SearchBar />
+        </div>
+      )}
       <nav className="px-4">
         <ul>
-          {navItems.map((item) => (
+          {items.map((item) => (
             <SidebarItem
               key={item.href}
               item={item}

@@ -24,3 +24,8 @@ export const navItems: NavItem[] = [
     ],
   },
 ];
+
+export const mypageNavItems: NavItem[] = [
+  { title: '내 계정 관리', href: '/mypage' },
+  { title: '좋아요한 컴포넌트', href: '/mypage/likes' },
+];
