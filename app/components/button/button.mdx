@@ -1,0 +1,52 @@
+import LikeButton from '@/components/likebutton';
+import CommentSection from '@/components/commentsection';
+import DeveloperDocs from '@/components/developerdocs';
+import Button from './button';
+
+<div className="doc-header">
+  <h1 className="doc-title">Button</h1>
+  <LikeButton />
+</div>
+
+<p className="intro-text">
+  버튼 소개입니다. 버튼은 사용자가 작업을 수행할 수 있도록 도와줍니다.
+</p>
+
+<div className="component-preview">
+</div>
+
+<h2 className="section-title">Anatomy</h2>
+
+<div className="anatomy-diagram">
+  <div className="anatomy-image">
+  </div>
+  <div className="anatomy-description">
+    <ol>
+      <li>Icon</li>
+      <li>Label</li>
+    </ol>
+  </div>
+</div>
+
+<h2 className="section-title">Variants</h2>
+
+<div className="variants-container">
+  <li>버튼은 명확한 동작을 전달해야 합니다.</li>
+</div>
+
+<h2 className="section-title">Usage Guidelines</h2>
+
+<ul className="usage-guidelines">
+  <li>버튼은 명확한 동작을 전달해야 합니다.</li>
+  <li>동일한 페이지에서 버튼의 스타일을 일관되게 유지하세요.</li>
+  <li>중요한 작업에는 Primary 버튼을, 보조 작업에는 Secondary 버튼을 사용하세요.</li>
+</ul>
+
+<h2 className="section-title">개발자용 문서</h2>
+
+<DeveloperDocs
+  title="Button"
+  description="코드 상에서 사용하는 방법을 storybook으로 문서화합니다."
+/>
+
+<CommentSection />
