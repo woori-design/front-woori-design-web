@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import Header from '@/components/layout/header';
 import './globals.css';
 import Sidebar from '@/components/layout/sidbar/sidebar';
+import Footer from '@/components/layout/footer';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -17,10 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {!hideSidebar && <Sidebar />}
           <main className="flex-1 p-6">{children}</main>
         </div>
-        <div className="p-4 text-sm text-[#ABABAB]">
-          <p>Version 0.0.1</p>
-          <p>업데이트 2025.xx.xx</p>
-        </div>
+        <Footer />
       </body>
     </html>
   );

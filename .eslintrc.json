@@ -9,7 +9,7 @@
     "plugin:tailwindcss/recommended",
     "prettier"
   ],
-  "plugins": ["@typescript-eslint", "tailwindcss", "prefer-arrow", "import"],
+  "plugins": ["@typescript-eslint", "tailwindcss", "prefer-arrow", "import", "prettier"],
   "rules": {
     "import/order": [
       "error",
