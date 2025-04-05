@@ -31,7 +31,7 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="w-60 border-r border-gray-200 bg-white h-screen overflow-auto mt-2">
+    <aside className="w-60 h-auto border-r border-gray-200 bg-white overflow-auto mt-2">
       {!isMypage && (
         <div className="p-4 relative">
           <SearchBar />

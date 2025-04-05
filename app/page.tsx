@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Main() {
   return (
-    <div className="flex flex-col items-center min-h-screen px-2">
+    <div className="flex flex-col items-center h-fit px-2">
       {' '}
       <div className="max-w-full w-full">
         {' '}
