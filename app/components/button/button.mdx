@@ -1,48 +1,44 @@
-import LikeButton from '@/components/likebutton';
-import CommentSection from '@/components/commentsection';
-import DeveloperDocs from '@/components/developerdocs';
-import Button from './button';
+import LikeButton from '@/components/docs/likebutton';
+import CommentSection from '@/components/docs/commentsection';
+import DeveloperDocs from '@/components/docs/developerdocs';
+import DocHeader from '@/components/docs/docHeader';
+import { Preview } from '@/app/components/mdx/preview';
 
-<div className="doc-header">
-  <h1 className="doc-title">Button</h1>
+<DocHeader title="Button">
   <LikeButton />
-</div>
+</DocHeader>
 
-<p className="intro-text">
-  버튼 소개입니다. 버튼은 사용자가 작업을 수행할 수 있도록 도와줍니다.
-</p>
+버튼은 사용자가 작업을 수행할 수 있도록 도와줍니다.
 
-<div className="component-preview">
-</div>
+---
 
-<h2 className="section-title">Anatomy</h2>
+## Anatomy
 
-<div className="anatomy-diagram">
-  <div className="anatomy-image">
-  </div>
-  <div className="anatomy-description">
-    <ol>
-      <li>Icon</li>
-      <li>Label</li>
-    </ol>
-  </div>
-</div>
+버튼은 다음의 요소로 구성됩니다:
 
-<h2 className="section-title">Variants</h2>
+1. Icon
+2. Label
 
-<div className="variants-container">
-  <li>버튼은 명확한 동작을 전달해야 합니다.</li>
-</div>
+---
 
-<h2 className="section-title">Usage Guidelines</h2>
+## Variants
 
-<ul className="usage-guidelines">
-  <li>버튼은 명확한 동작을 전달해야 합니다.</li>
-  <li>동일한 페이지에서 버튼의 스타일을 일관되게 유지하세요.</li>
-  <li>중요한 작업에는 Primary 버튼을, 보조 작업에는 Secondary 버튼을 사용하세요.</li>
-</ul>
+- 버튼은 명확한 동작을 전달해야 합니다.
+- 버튼은 다양한 스타일(Primary, Secondary 등)을 가질 수 있습니다.
 
-<h2 className="section-title">개발자용 문서</h2>
+<Preview>Secondary</Preview>
+
+---
+
+## Usage Guidelines
+
+- 버튼은 명확한 동작을 전달해야 합니다.
+- 동일한 페이지에서 버튼의 스타일을 일관되게 유지하세요.
+- 중요한 작업에는 Primary 버튼을, 보조 작업에는 Secondary 버튼을 사용하세요.
+
+---
+
+## 개발자용 문서
 
 <DeveloperDocs
   title="Button"
